@@ -1,0 +1,12 @@
+fastapi
+uvicorn[standard]
+httpx
+requests
+python-multipart
+python-dotenv
+playwright
+pytesseract
+pillow
+numpy
+opencv-python-headless
+scikit-image
