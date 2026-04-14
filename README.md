@@ -31,6 +31,7 @@ The project was developed to reduce the time and manual effort required to trans
 ## Project Structure
 - `frontend/` : web interface for image upload, model selection, component selection, code display, preview, and similarity score
 - `backend/` : API handling, image processing, model communication, rendering, and evaluation logic
+- `colab/` : Colab-based scripts for Mimic model training and inference API serving
 - `assets/screenshots/` : project screenshots for mimic presentation
 
 ## Tech Stack
@@ -47,11 +48,16 @@ The project was developed to reduce the time and manual effort required to trans
 - LoRA (Low-Rank Adaptation)
 - Custom fine-tuned Mimic model
 - Gemini Flash 2.5 API
+- Google Colab
 
 ### Evaluation / Utilities
 - Playwright
 - OCR-based text comparison
 - Visual similarity metrics
+
+### Colab Components
+- mimic_training_colab.py : used for fine-tuning the Mimic model with LoRA
+- mimic_inference_api_colab.py : used for running the Mimic inference API that receives UI images and returns generated HTML
 
 ## Workflow
 1. User uploads a UI image
@@ -115,7 +121,8 @@ uvicorn main:app --reload
 ## Notes
 * This project focuses on generating HTML with inline CSS from UI images
 * It is intended for static UI structure generation rather than full interactive web functionality
-* Output quality depends on the complexity and clarity of the input UI image 
+* Output quality depends on the complexity and clarity of the input UI image
+* The Mimic workflow is separated into training and inference API components for better maintainability
 
 ## Project Status
 Final Year Project
